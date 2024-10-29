@@ -3,13 +3,13 @@
 import Sidebar from "@/components/global/Sidebar";
 import Navbar from "@/components/global/Navbar";
 import MobileSidebar from "@/components/global/MobileSidebar";
-import { useState, ReactElement } from "react";
+import { useState, ReactNode } from "react";
 
 interface IProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
-const DashboardLayout = ({ children }: IProps): ReactElement => {
+const DashboardLayout = ({ children }: IProps): ReactNode => {
   const [open, setOpen] = useState(false);
 
   return (

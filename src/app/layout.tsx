@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${wixMadeforTex.variable} ${nunitoSans.variable} font-wixMadeforTex`}
       >
-        <DashboardLayout />
+        <DashboardLayout>{children}</DashboardLayout>
       </body>
     </html>
   );
