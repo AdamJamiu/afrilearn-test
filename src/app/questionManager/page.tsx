@@ -1,10 +1,12 @@
-import Image from "next/image";
-import { VscSettings } from "react-icons/vsc";
+import QuestionManagerNav from "@/components/global/custom/QuestionManagerNav";
+import QuestionOne from "@/components/global/custom/QuestionOne";
+import QuestionTwo from "@/components/global/custom/QuestionTwo";
+// import Image from "next/image";
 
 export default function QuestionManager() {
   return (
-    <section className="">
-      <div className="w-full flex justify-start items-center gap-2">
+    <section className="sm:py-0 py-4">
+      <div className="w-full flex justify-start items-center gap-2 mb-8">
         <svg
           width="20"
           height="20"
@@ -12,7 +14,7 @@ export default function QuestionManager() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_320_214)">
+          <g clipPath="url(#clip0_320_214)">
             <path
               d="M1.25 5.93734H4.67C4.9383 6.9245 5.52397 7.79595 6.33666 8.41725C7.14935 9.03855 8.1439 9.37516 9.16687 9.37516C10.1898 9.37516 11.1844 9.03855 11.9971 8.41725C12.8098 7.79595 13.3955 6.9245 13.6637 5.93734H28.75C29.0815 5.93734 29.3995 5.80564 29.6339 5.57122C29.8683 5.3368 30 5.01886 30 4.68734C30 4.35581 29.8683 4.03787 29.6339 3.80345C29.3995 3.56903 29.0815 3.43734 28.75 3.43734H13.6637C13.3955 2.45017 12.8098 1.57872 11.9971 0.957422C11.1844 0.336126 10.1898 -0.000488281 9.16687 -0.000488281C8.1439 -0.000488281 7.14935 0.336126 6.33666 0.957422C5.52397 1.57872 4.9383 2.45017 4.67 3.43734H1.25C0.918479 3.43734 0.600537 3.56903 0.366117 3.80345C0.131696 4.03787 0 4.35581 0 4.68734C0 5.01886 0.131696 5.3368 0.366117 5.57122C0.600537 5.80564 0.918479 5.93734 1.25 5.93734ZM9.16625 2.49984C9.5989 2.49984 10.0218 2.62813 10.3816 2.8685C10.7413 3.10886 11.0217 3.4505 11.1872 3.85022C11.3528 4.24993 11.3961 4.68976 11.3117 5.1141C11.2273 5.53843 11.019 5.9282 10.713 6.23413C10.4071 6.54006 10.0173 6.7484 9.59301 6.8328C9.16868 6.91721 8.72884 6.87389 8.32913 6.70832C7.92942 6.54276 7.58778 6.26238 7.34741 5.90265C7.10704 5.54291 6.97875 5.11998 6.97875 4.68734C6.97941 4.10738 7.21009 3.55136 7.62018 3.14127C8.03028 2.73118 8.58629 2.5005 9.16625 2.49984Z"
               fill="#B2BBCE"
@@ -36,6 +38,12 @@ export default function QuestionManager() {
         <h2 className="font-semibold text-primary_grey md:text-xl">
           Test Info
         </h2>
+      </div>
+
+      <div className="w-full space-y-7">
+        <QuestionManagerNav />
+        <QuestionOne />
+        <QuestionTwo />
       </div>
     </section>
   );

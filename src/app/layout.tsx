@@ -38,7 +38,7 @@ export default function RootLayout({
         <Navbar />
         <Sidebar />
         <MobileSidebar />
-        <main className="md:mt-7 mt-16 ml-0 md:ml-56 bg-[#F1F5F8] h-full min-h-[94vh] p-4 sm:p-10 md:p-16">
+        <main className="md:mt-7 mt-16 ml-0 md:ml-56 bg-[#F1F5F8] h-full min-h-[94vh] p-4 sm:p-10 md:pt-16 md:pb-16 pr-6 md:pl-16">
           {children}
         </main>
       </body>
