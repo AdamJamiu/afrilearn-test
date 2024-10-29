@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Wix_Madefor_Text } from "next/font/google";
-import Sidebar from "@/components/global/Sidebar";
-import Navbar from "@/components/global/Navbar";
+import DashboardLayout from "../components/global/DashboardLayout";
 import "./globals.css";
-import MobileSidebar from "@/components/global/MobileSidebar";
 
 const wixMadeforTex = Wix_Madefor_Text({
   variable: "--font-wixMadeforTex",
@@ -35,12 +33,7 @@ export default function RootLayout({
       <body
         className={`${wixMadeforTex.variable} ${nunitoSans.variable} font-wixMadeforTex`}
       >
-        <Navbar />
-        <Sidebar />
-        <MobileSidebar />
-        <main className="md:mt-7 mt-16 ml-0 md:ml-56 bg-[#F1F5F8] h-full min-h-[94vh] p-4 sm:p-10 md:pt-16 md:pb-16 pr-6 md:pl-16">
-          {children}
-        </main>
+        <DashboardLayout />
       </body>
     </html>
   );

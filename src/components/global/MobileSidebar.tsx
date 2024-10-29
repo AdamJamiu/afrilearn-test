@@ -3,21 +3,29 @@
 import Link from "next/link";
 import { test_configuration, test_progress } from "../../data/sidebar";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { ReactElement } from "react";
 import { CgClose } from "react-icons/cg";
 
-const MobileSidebar = () => {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+interface IMobileSideProps {
+  open: boolean;
+  setOpen: (prop: boolean) => void;
+}
 
-  if (!open) return;
+const MobileSidebar = ({ setOpen, open }: IMobileSideProps): ReactElement => {
+  const pathname = usePathname();
+
+  // if (!open) return <></>;
   return (
     <>
-      <div className="fixed bg-black ease-in-out transition-all duration-150 opacity-30 inset-0 z-[100] sm:hidden block"></div>
+      <div
+        className={`${
+          open ? "opacity-30 z-[100]" : "opacity-0 -z-[100]"
+        } fixed bg-black ease-in-out transition-all duration-150 inset-0 sm:hidden block`}
+      ></div>
       <aside
         className={`${
-          open ? "translate-x-0" : "translate-x-[1000]"
-        } fixed bg-white inset-0 bottom-0 border-2 shadow-[#F1F5F8]ease-in-out duration-300 transition-all z-[111] sm:hidden block`}
+          open ? "translate-x-0 z-[111]" : "-translate-x-[1000px] -z-[111]"
+        } fixed bg-white inset-0 border-2 shadow-[#F1F5F8] ease-in duration-500 transition-transform sm:hidden block`}
       >
         <div className="h-full overflow-y-auto p-4 mt-5 relative">
           <button

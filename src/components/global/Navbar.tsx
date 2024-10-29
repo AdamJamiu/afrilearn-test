@@ -3,8 +3,13 @@ import { CiPlay1 } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoChevronBack } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
+import { ReactElement } from "react";
 
-const Navbar = () => {
+interface INavProps {
+  setOpen: (prop: boolean) => void;
+}
+
+const Navbar = ({ setOpen }: INavProps): ReactElement => {
   return (
     <nav className="fixed right-0 left-0 top-0 bg-white shadow-sm z-[99] font-wixMadeforTex py-4 pl-0 pr-4 sm:p-4 text-sm md:text-base">
       <div className="flex justify-between items-center w-full">
@@ -41,7 +46,10 @@ const Navbar = () => {
             <CiPlay1 size={20} />
             <p className="font-wixMadeforTex text-sm">Activate test</p>
           </button>
-          <button className="sm:hidden block p-1.5 rounded-full hover:bg-gray-100 ease transition-all">
+          <button
+            onClick={() => setOpen(true)}
+            className="sm:hidden block p-1.5 rounded-full hover:bg-gray-100 ease transition-all"
+          >
             <IoMenuSharp size={25} />
           </button>
         </div>

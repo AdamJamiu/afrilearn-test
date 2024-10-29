@@ -12,7 +12,7 @@ export default function Statistics(): ReactNode {
     <section className="h-full w-full">
       <div className="w-full flex justify-start items-center gap-2">
         <LuPieChart size={22} color="#B2BBCE" />
-        <h2 className="font-semibold text-primary_grey md:text-xl">
+        <h2 className="font-semibold text-primary_grey md:text-lg">
           Class performance statistics
         </h2>
       </div>
