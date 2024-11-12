@@ -48,6 +48,7 @@ const MobileSidebar = ({ setOpen, open }: IMobileSideProps): ReactElement => {
                   className="w-full font-nunitoSans"
                 >
                   <button
+                    onClick={() => setOpen(false)}
                     className={`${
                       pathname.includes(item.link)
                         ? "bg-glass_green text-[#0B1A2D] font-semibold"

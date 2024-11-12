@@ -50,7 +50,7 @@ const Navbar = ({ setOpen }: INavProps): ReactElement => {
             onClick={() => setOpen(true)}
             className="sm:hidden block p-1.5 rounded-full hover:bg-gray-100 ease transition-all"
           >
-            <IoMenuSharp size={25} />
+            <IoMenuSharp className="text-primary_grey" size={25} />
           </button>
         </div>
       </div>
